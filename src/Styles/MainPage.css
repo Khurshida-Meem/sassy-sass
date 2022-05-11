@@ -1,0 +1,49 @@
+.mainPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainPage h1 {
+  color: palevioletred;
+}
+
+.mainPage button {
+  width: 200px;
+  height: 40px;
+  background-color: palevioletred;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon-size {
+  font-size: sizes;
+}
+
+.micro {
+  width: 180px;
+}
+
+.btn-basic, .btn-prime, .btn-second {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.btn-prime {
+  background-color: antiquewhite;
+}
+
+.btn-second {
+  background-color: azure;
+}
+/*# sourceMappingURL=MainPage.css.map */

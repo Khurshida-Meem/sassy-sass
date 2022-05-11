@@ -1,0 +1,19 @@
+// =====================colors
+$primaryColor: rgb(18, 102, 130);
+$whiteColor: white;
+$pinkColor: palevioletred;
+
+// ======================fonts
+$titleFont: Arial, Helvetica, sans-serif;
+$bodyFont: 'Times New Roman', Times, serif;
+
+@mixin  buttonStyle ($color, $fontSize) {
+    width: 200px;
+    height: 40px;
+    background-color: $color;
+    border: none;
+    border-radius: 10px;
+    color: $whiteColor;
+    font-size: $fontSize;
+    cursor: pointer;
+}

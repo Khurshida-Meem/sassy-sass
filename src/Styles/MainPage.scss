@@ -1,0 +1,80 @@
+@import '../Variables/Variables.scss';
+
+
+.mainPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        color: $pinkColor;
+    }
+
+    button{
+        @include buttonStyle($pinkColor, 20px);
+    }
+}
+
+// if/else
+@mixin theme-switcher ($theme) {
+    @if $theme == 'light' {
+        background-color: aqua;
+    } else{
+        background-color: aquamarine;
+    }
+}
+
+// loop
+
+$sizes: 32px, 48px, 72px;  //this is a list
+
+@each $size in sizes {
+    .icon-#{size} {
+        font-size: $size;
+    }
+}
+
+// {********************* result *****************}
+// .icon-32px{
+//     font-size: 32px;
+// }
+// .icon-48px{
+//     font-size: 32px;
+// }
+// .icon-72px{
+//     font-size: 32px;
+// }
+
+
+// functions
+
+// this function will receive unlimited number of parameters
+@function sum ($numbers...) {
+    $sum: 0;
+    // here numbers are in list so looping it.
+    @each $number in $numbers {
+        $sum: $sum + $number;
+    }
+    @return $sum;
+}
+
+.micro{
+    // it will sum the 3 parameters
+    width: sum(50px, 30px, 100px);
+}
+
+// extend
+
+.btn-basic{
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.btn-prime{
+    @extend .btn-basic;
+    background-color: antiquewhite;
+}
+.btn-second{
+    @extend .btn-basic;
+    background-color: azure;
+}
